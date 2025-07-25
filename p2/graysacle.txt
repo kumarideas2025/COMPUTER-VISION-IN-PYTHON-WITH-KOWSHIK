@@ -1,0 +1,12 @@
+gray-scale conversion-
+cvt-color
+
+color__>gray 
+why gray?
+-processing time less
+-less compression
+
+
+gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+                               |
+                               color to gray conver

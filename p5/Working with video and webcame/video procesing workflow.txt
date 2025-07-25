@@ -1,0 +1,84 @@
+VIDEO PROCESS WORKFLOW-->
+
+WHAT IS A VIDEO?
+=> IS JUST COLLECTION OF IMAGES.(30-60 IMAGE IN PER SECOND)
+
+WHAT USE WEBCAM?
+
+WHAT IS FRAME?
+IS A PHOTO WHICH IS APART OF VIDEO CHAIN.
+I1..I2..I3..FINAL IMAGE...EVERY I1 IS FRAME(1 SINGLE IMAGE)
+1 SINGLE VIDEO=MANY FRAMES.
+
+
+
+ 
+
+
+
+
+
+
+cv2.VideoCapture()-->
+can open webcam on machine, video file,can read video file one by one
+so that we can read the frames.
+example: from many animal species and people .find people we use it.
+
+source---if we use webcam from internal webcam then use0 or external use 1.
+cap=cv2.VideoCapture(source)
+
+cap.read()?
+ 1st ret  that will return TRUE or FALSE And  2nd is frame
+
+  cv2.waitKey(1) & 0xFF==ord('k') 
+  means ..wait 1 mm second if then we did not press any key that will return -1
+  OR we press any key it will return keycode. keycode means ascii number of that key. [if the keycode is match with with the ord('key')....then the loop will break]
+  &0xFF means bitwise operation...(in windows / linux they just return some crazy key  values so that 0xFF will  fix the values in right key).
+  ord('k)..with the help of odd function we find the ascii number of k.
+
+
+
+
+
+
+
+
+FRAME BY FRAME PROCESSING=> (take action in every frame)..
+like for Kowshik face drawing a circle , Kumar face drawing a rectangle
+detect every (face,eye,cars nameplate) with some action over it.
+analysis-->color,size,motion,labeling,speed tracking,
+specific time image save ...
+F1=>DETECT PERSON ,DRAW A BOX.
+F2=>DETECT PERSON ,DRAW that BOX.
+...FINAL VIDEO
+usage->self driving car,snapchat filter,with the face movement frame is changed.
+
+
+
+
+
+
+
+
+
+
+saving Webcam videos to a file with openCv--->
+
+VideoCaption(0) [for open camera]   ,  videoWriter()[for recording] , .release()[to stop camera]
+step-1> open camera
+step-2> height and width
+step-3>recording start and save it though a file
+step-4>show 
+step-5> k press to quite
+
+cv2.VideoWriter(filename,codec,fps,frame_size) 
+
+.avi--> audio video interleave  
+open cv will write on .avi using XVID codeC(compression format)
+
+fps=>frame per second
+ 
+frame size:
+cv2.CAP_PROP_FRAME_WIDTH- Width of the frames in the video stream.
+cv2.CAP_PROP_FRAME_HEIGHT- Height of the frames in the video stream.
+ 

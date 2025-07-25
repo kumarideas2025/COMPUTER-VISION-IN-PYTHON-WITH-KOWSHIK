@@ -1,0 +1,7 @@
+HEIGHT,WIDTH,CHANNEL
+  |      |     |
+  480    640   3
+
+  BGR
+
+  GRAY SAL--->(CHANEL)

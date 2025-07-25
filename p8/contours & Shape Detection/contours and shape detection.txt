@@ -1,0 +1,74 @@
+1.FINDING CONTOURS
+2.SHAPE DETECTION
+3.DRAWING CONTOURS
+
+
+                    FINDING AND DRAWING CONTOURS IN OPENCV
+
+contours are curves that join all the continuous points along a boundary that have the same color or intensity.
+They are useful for shape analysis, object detection, and recognition. 
+Contours can be used to find the outline of objects in an image.(find binary image==> black &white image)
+which can then be used for various applications such as shape matching, object tracking, and image segmentation..
+
+***********cv2.findContours()
+
+contours,hierarchy=cv2.findContours(image,mode,method)
+
+
+image==. binary image(balck and white)
+mode=>retrieval mode (RETR_TREE)..all shapes with hierarchy , (RETR_EXTERNAL)...outpoint shape, (RETR_LIST)...witout hierarchy  
+      .how many of contrast have to return  & what kind of contrast of contrast .
+
+method=>approximation method.how much information is to return for each contours.
+there are two things->
+
+1.cv2.CHAIN_APPROX_SIMPLE     --> this will store corner point.this will save memory.      [shape detection]
+2.cv2.CHAIN_APPROX_ONE        -->every pixel of the corner and it is very details.         [hand  writing detection]
+
+
+
+contours==> we find a list of every outline  point in a shape.
+hierarchy==> all information of all Contours.(parent to  child).
+
+
+
+
+******cv2.drawContours()----> that will create a outer line in inner box shape element. like you have to find a square into a square. and use it to give outer line , for find the inner square.
+cv2.drawContours(image,contours,contour_index,color,thickness)
+
+contour_index---> -1/1..which shape is to draw. 0 means first shape draw. 1 means second shape draw.-1 all shapes have to be draw.
+
+
+
+                                          SHAPE-DETECTION
+
+********approxPolyDP()--->BY COUNTING THERE CORNER :
+
+approx=cv2.approxpolyDP(contour,epsilon,True)                                                                                        
+[0.01*cv2.arclength(contour),True]
+
+contour/shape-->
+small=more pre-size,more point
+larger=rougher,fewer point
+
+arclength= a total length of rope / total length of a triangle.
+
+True==> start and end are closed in contour.
+False==> there is a open line in contour.
+
+
+why 0.01*length/ 0.1*length ???
+=> it means epsilon ...more closely look is possible. epsilon WILL TELL SIMPL-FLY SHAPE HOW MUCH CLOSER TO ORIGINAL.
+example: if a circle is smaller than it is easy to raf there circle.
+
+
+
+
+***************SHAPE        ARC-LENGTH         epsilon
+            small (TRIANGLE)   200PX           0.01*200
+            larger(SQUARE)     800PX           0.01*800
+            circle(big)        1200PX          0.01*1200
+
+
+ 
+

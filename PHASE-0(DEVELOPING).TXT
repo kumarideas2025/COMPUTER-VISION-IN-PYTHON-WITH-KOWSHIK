@@ -1,0 +1,44 @@
+INTRODUCTION
+IMPORTANCE
+
+3 PROBLEM--
+THE CHALLENGE OF WRITING IMAGE PROCESSING CODE
+THE ABSENCE OF A UNIFIED LIBRARY FOR IMAGE PROCESSING
+SLOW  PROCESSING OF IMAGE PROCESSING
+
+SOLUTION->
+EASY TO USE
+OPEN SOURCES STANDER
+LIGHTNING FAST PERFORMANCE
+
+
+
+400+ function-->
+
+
+
+
+open cv= open source computer vision
+free for every OPEN
+vision-
+images
+videos
+objects
+faces
+motion
+documents
+bar-codes
+Number plates  
+
+
+Use-->
+automobile industry
+Health-cares
+retails & e-comm-rce
+face and hand-tracking in camera base game
+robot vision
+
+face lock -(memory check with  face)
+
+open cv +  tensorflow+ py-touch
+

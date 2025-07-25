@@ -1,0 +1,32 @@
+GAOL--> CAN BREAKOUT SHAPE AND OUT STRUCTURE OF ANY IMAGE.
+
+CANNY EDGE DETECTION-->DETECT OUT EDGE OF ANY IMAGE.
+IMAGE THRESHOLDING---> UNCLEAR IMAGE TO BLACK AND WHITE CLEAR IMAGE(OBJECT DETECTION AND MASKING).
+BITWISE OPERATION---> COMBINE IMAGE ,CUT SHAPES.
+
+
+
+*********CANNY EDGES DETECTION:
+edges=cv2.Canny(image,threshold1,threshold2)
+
+we find a edge in a image where brightness is changed suddenly.
+.>to detect border
+.>separate object
+.>feature extraction
+.>sketch drawing
+.>face  recognization 
+
+****** threshold:
+threshold1=>  lower bound to detect weak edges.  
+threshold2=>  upper bound to detect strong edges.
+(to set a cutoff mark)... like full or full black.
+
+*****Bitwise operator:
+1.2 image COMBINE
+2.cut OUT
+3.flip/remove
+
+cv2.bitwise_and(img1,img2)..cutout shape from another images...The result will show the overlapping area where both images have non-zero values.
+cv2.bitwise_or(img2,img1).....combined 2 into 1......The result will show all areas where either image has non-zero values.
+cv2.bitwise_not(img1,img2)....AND (FACE AREA FROM MASS),OR (ADD SOMETHING),NOT(opposite opf original image).......which inverts the pixel values (black becomes white and vice versa).
+

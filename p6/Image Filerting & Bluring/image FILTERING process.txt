@@ -1,0 +1,67 @@
+GOAL--> BETTER IMAGE, CLEAR IMAGE, SMOOTH IMAGE.
+
+1.IMAGE FILTERING------->
+SHARP ----> SMOOTH.(CLEAR RAF AREA).
+
+
+2.BLURING--->
+FOCUS ON MAIN OBJECT.
+TYPES--> GAUSSIAN BLUR , MEDIAN BLUR , BILATERAL BLUR , NORMAL BLUR.
+
+3.NOISE----->
+BY USING IT WE FILTER OUT IT.
+
+FLITTERING --. CHANGE EVERY PIXEL USING IT'S 
+
+4.KERNEL-->
+MINI SQUARE [LIKE: 3 X 3] matrix. will tell what to do with central pixel
+
+
+
+Gaussian Blur--->( image soft , remove dust,shrap edges ,remove noise, preprocessing)
+blurred_image = cv2.GaussianBlur(image,(kernel_size_x,kernel_size_y),sigma)
+
+******kernel_size_x,kernel_size_y=== they are windows size and they are always [odds]****
+
+
+kernel size==>
+(3,3)--> light-blur
+(9,9)-->strong-blur
+(21,21)--> super blur
+
+
+
+
+
+
+
+
+Median blur---> to remove random black and white
+blurred=cv2.medianBlur(image,kernel_size)
+we can clean image  by replacing each pixel with middle value.
+will do in 3 steps->
+find group of pixel.
+according to there brightness value sward them.
+find-out the middle value.
+
+
+*****Here we replace our center value with average value
+we use that to implement fine to car . with that only show number plate other nosic is blurred.
+
+
+
+Sharpening-->
+cv2.filter2D(src, ddepth ,kernel)
+will make picture more clear and crisp. highlights edges and boost the contrast between pixel.....mean swe can saw the outline very clear from a image outline.
+ddepth-> -1
+here wwe also use numpy
+
+sharpen_kernel=np.array([
+    [0,-1,0],
+    [-1,5,-1],
+    [0,-1,0]
+])
+here we can see 5 number is the most brightest area in image. -1 are make them little dumb so that 5 is visible clearly . 0 makes no change in the corner edges.
+
+
+

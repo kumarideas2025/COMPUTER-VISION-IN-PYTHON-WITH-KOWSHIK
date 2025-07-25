@@ -1,0 +1,21 @@
+1.drawing lines-->
+cv2.line()
+- areas highlights,array drawing,boundry draw
+cv2.line(img,pt1,pt2,color,thickness)---->color means line color
+
+2.drawing And Rectangle-->
+cv2.rectangle()s
+cv2.rectangle(img,pt1,pt2,color,thickness)
+
+3.drawing a circle-->
+cv2.circle()
+cv2.circle(img,center,radius,color,thickness)
+radius will go with pixel
+*** thickness -1 will fill that whole circle with color.
+
+
+4.Adding Text--
+cv2.putText()
+object marks,label add,to add any information.
+cv2.putText(img,text,org,font,fontScale,color,thickness)
+org-(x,y)....font--font type ...fontScale(10 => normal  ,20=>big)

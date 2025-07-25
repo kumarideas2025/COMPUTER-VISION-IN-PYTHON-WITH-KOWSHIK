@@ -1,0 +1,58 @@
+OPEN CV BASIC AND IMAGE HANDLING
+
+IMAGE HANDLING--
+READING IMAGE
+DISPLAYING IMAGE
+SAVING IMAGE
+IMAGE DIMENSIONS
+COLOR CHANNELS
+GRAY-SCALE CONVERSION
+
+MINI PROJECTS
+LOAD  IMAGE
+CONVERT TO GRAY-SCALE
+IMAGE SAVE
+
+BASIC TERMS-->
+IMAGE--> IS A 2D GRADE
+PIXEL--> SMALL COLOR TRIXS OF NUMBERS/SMALLEST OF IMAGE 
+IF A PIXEL IS COLORED THEN IT WILL HOLD 3 COLORS(RGB)[128,200,90]
+
+WIDTH=> TOTAL NUMBER OF PIXELS BUT <---->LY 
+HEIGHT+> ,,   ,,       ,,   ,,    VERTICAL
+
+COLOR CHANEL->A CHANNEL THAT STORE ONE PART OF CHANNEL EACH COLOR/ WILL STORE COLOR INFORMATION
+
+GRAY SCALE>
+RGB
+| | |
+1 2 3 
+ 
+ ***** PIXEL HAS 3 NUMBER IN RGB
+
+IMAGE FORMAT--> .JPG,.PNG.....HOW IMAGE DATA STORE , COMPRESS.
+
+.JPG=> SMALL
+.PNG=>HIGH
+.TIFF-> SUPER HIGH 
+
+
+
+
+1.im read()
+to read any image before load
+image=cv2.imread("filename.jpg",flag)
+
+variable, cv2==refer,  filelocation,flag 3 option=1-colorful,0-gray-scale,-1--> unchanged
+
+2.display 
+-imshow-> scren
+-waitkey->pause
+-destroy-> close
+
+cv2.imshow("windows Title",image)
+cv2.waitkey(0)=====0 means until any button press in keyboard. if press windows lose
+cv2.destroyALLwindows()
+
+saving-->
+cv2.imwrite("output.jpg,image)

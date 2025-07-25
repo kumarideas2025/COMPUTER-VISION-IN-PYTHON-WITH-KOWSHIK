@@ -1,0 +1,48 @@
+image transformation and manipulation--->
+1.Resizing and scaling-->
+cv2.resize()--> can change size of any image
+different  screen different size
+In ml standard image size
+
+resized=cv2.resize(src,dsize,fx,fy,interpolation)
+        |     |     |    |    
+variables  library original (width,height)  other are optional  
+interpolation->content quality 
+
+
+2.cropping--->
+it using slicing in open cv
+just matrixes /2d /3d arrays
+why??
+from a pic detect face only..
+image[start y: start y,start x :end x ]
+
+
+
+3.image rotation ang flipping-->
+turn a image from it's center . it can be 90 /180 degree 
+why?
+auto adjust in capture,data variety in AI training which called data  obmentation
+
+M=cv2.getRotationMatrix2D(center,angle,scale)...
+
+CENTER PAIRS OF NUMBERS(TO TELL HOW TO ROTATE CLOCK OR ANTI CLOCK WISE)
+ANGLE WHICH DEGREE WILL IT ROTATE 90 CLOCK WISE / -90 ANTI-CLOCK WISE 
+SCALE HOW MUCH TO ZOOM IN ZND ZOOM OUT(1.0,0.5)....(H//2)..INTEGER DIVISION ..(H/2)..DACEMALE DIVISION
+WHY?
+(5//2,5/2)?
+CAUSE WE NEEDED TO FIND THE CENTER
+
+
+
+
+rotated_image=cv2.warpAffine(image,M,(width,height))
+IMAGE=ORIGINAL IMAGE
+M=FORMAT
+(W,H)
+
+
+4.image flipping-->
+flipped=cv2.flip(image,flip-code)
+will flip -->flip code=>0-vertically (top to bottom) 1-horizontally(left to right) -1=both
+

@@ -1,0 +1,31 @@
+                   START
+                     |
+-------------( HAAR CASCADES)--------
+|                   |                |
+FACE DETECTION    EYE DETECTION     SMILE DETECTION
+|                    |               |
+--------------------------------------
+                     |
+                DRAW BOXES
+                     |
+                    FAD
+
+
+
+PROBLEM STATEMENT:->
+1. DID NOT KNOW FACE BY COMPUTER
+2. MANUAL MARK PEOPLE FACE
+3.CONSISTENT AND FAST DETECTION CAN NOT DONE.
+
+SOLUTION->
+HAAR CASCADES(MINI AI BRAIN):
+1. KNOW HOW FACE LOOK
+2.REAL-TIME(FAST)
+3.WITHOUT INTERNET
+
+
+REQUIREMENT->
+1.WEBCAM
+2.OPEN.CV
+3.HAAR XML FILE-->https://github.com/opencv/opencv/tree/master/data/haarcascades....... we can find al pre-train model from here.
+
